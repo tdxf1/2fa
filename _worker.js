@@ -695,7 +695,7 @@ function parseOTPAuthURI(uri) {
 // ===== CORS 配置 =====
 function getCorsHeaders(request, env) {
     const origin = request.headers.get('Origin');
-    const allowedOrigins = env.ALLOWED_ORIGINS ? env.ALLOWED_ORIGINS.split(',') : ['*'];
+    const allowedOrigins = env.ALLOWED_ORIGINS ? env.ALLOWED_ORIGINS.split(',') : [];
     
     if (allowedOrigins.includes('*') || allowedOrigins.includes(origin)) {
         return {
