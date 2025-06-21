@@ -2993,7 +2993,7 @@ header h1 {
             document.getElementById('userInfo').classList.remove('hidden');
             
             if (userInfo) {
-                document.getElementById('userName').textContent = userInfo.username || userInfo.nickname || '未知用户';
+                document.getElementById('userName').textContent = userInfo.login || userInfo.displayName || '未知用户';
                 document.getElementById('userEmail').textContent = userInfo.email || '';
                 
                 const avatarImg = document.getElementById('userAvatar');
